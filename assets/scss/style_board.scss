@@ -1,0 +1,117 @@
+@import "./media_query";
+@import "./colors";
+@import "./tab";
+body{
+  background-color: $body;
+  //font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
+  .total{
+    display: flex;
+    justify-content: center;
+   
+    .partToDo{
+      background-color: $container;
+      border:1px solid black;
+      border-radius: 20px;
+      position: absolute;
+      padding: 30px;
+        .title{
+          text-align: center;
+          position: relative;
+          
+        }
+      .boardss{
+            padding: 10px;
+            background-color:transparent;
+            display: flex;
+            justify-content: center;
+            height: 300px;
+            min-width: 200px;
+            background-color :white;
+            margin: 10px;
+            .boardProp{   
+              @include  breakpoint(large) {
+                padding: 0px;
+                margin: 1px;
+              }
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              flex-grow: 1;
+              padding: 3%;
+              width: 50%;
+              height: 250px;
+              min-width: 95px;
+              margin: 10px;
+                
+              ul{
+                  margin-left: 2%;
+                /*  list-style-position: outside;*/
+                  font-family: "Comic Sans MS", cursive, sans-serif;
+                  color:black;
+                  @include  breakpoint(xsmall) {
+                  font-size: 13px;
+                  margin-left: 0px;
+                  list-style-position: unset;
+                  }
+                
+              }
+            }
+        
+      }
+    }
+  }
+  
+  div {
+      box-sizing: border-box;
+      border-radius: 10px;
+      
+    }
+    .buttonDesign{
+      /*background-image: url("background7.jpg");*/
+      background-color:$ordinary;
+      color: white;
+      padding: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 40px;
+      align-items: center;
+      border-color: white;
+      @include  breakpoint(small) {
+      font-size: 15px;
+      padding:0px;
+      size: 5px;
+      }
+    }
+    h4{
+      margin-left: 5%;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      color:grey;
+    
+    }
+  
+
+}
+
+
+
+
+ /* @media only screen and (max-width:590px) {*/
+ 
+ /*  .boardProp{
+     padding: 0px;
+     margin: 1px;
+   }
+    ul{
+      font-size: 13px;
+      margin-left: 0px;
+      list-style-position: unset;
+    }
+   .buttonDesign{
+    font-size: 15px;
+    padding:0px;
+    size: 5px;
+   }
+  
+}*/
